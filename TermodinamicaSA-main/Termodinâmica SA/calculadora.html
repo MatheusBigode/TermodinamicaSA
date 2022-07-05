@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles/calculadora.css">
+
+</head>
+<body>
+    <div>
+        <br>
+        <a href="index.html">Voltar</a>
+    </div> 
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <div id="variaçaoenergiaint">
+        <h2>Variação de Energia Interna</h2>
+        <p>Insira a quantidade de calor</p>
+        <input type="number" id="calor1">
+        <p>Insira quantidade de trabalho</p>
+        <input type="number" id="trabalho1">
+        <br>
+        <br>
+        <input type="button" value="Calcular" onclick="calcular()" id="button">
+        <p>Resultado</p>
+        <p id="saida"></p>
+        <input type="button" value="Limpar" onclick="limpar()" id="button">
+        <script>
+            
+            function calcular() {
+            var calor1 = document.getElementById("calor1")
+            var trabalho1 = document.getElementById("trabalho1")
+            var n1 = Number(calor1.value)
+            var n2 = Number(trabalho1.value)
+            var res = n1 - n2
+            document.getElementById("saida").innerHTML = res
+            }
+
+            function limpar() {
+            calor1 = (" ") 
+            trabalho1 = (" ")
+            var limpcalor1 = document.getElementById("calor1").value = limpcalor1
+            var limptrabalho1 = document.getElementById("trabalho1").value = limptrabalho1
+            document.getElementById("saida").innerHTML = " "
+            }
+
+        </script>
+    </div>
+    
+</body>
+</html>
